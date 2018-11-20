@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>SinghFactory | Login</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
+     <link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}" />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"  th:href="@{/css/register.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+    <!-- Theme style -->
+
+
+<body class="hold-transition login-page">
+<div class="login-box">
+	<div class="login-logo">
+        <b>Singh</b>Factory
+   </div>
+
+     <div class="login-box-body">
+      <p class="login-box-msg">Login for Access</p>
+       <div th:if="${param.error}">
+            <div class="callout callout-danger">
+                <p>Username or password invalid!</p>
+            </div>
+        </div>
+        
+                    <form role="form" th:action="@{/login}" method="POST">
+                        <fieldset>
+                                    <div class="form-group has-feedback">
+						                <input type="text" class="form-control" id="email" name="email" th:placeholder="email"/>
+						                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+						            </div>
+                                    <div class="form-group has-feedback">
+						                <input type="password" class="form-control" id="password" name="password" placeholder="password"/>
+						                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+						            </div>
+
+                                    <div class="row">
+					                <div class="col-xs-4">
+					                    <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+					                </div>
+					            </div>
+					                                
+                        </fieldset>
+                    </form>
+                
+            </div>
+             <!-- /.content-wrapper -->
+    </div>
+    <footer class="text-center"> 
+        <strong>Powered By SegonaTech</strong>
+    </footer>
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" layout:decorator="layout">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HOME</title>
+	
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div layout:fragment="content">
+		<!-- Content Header (Page header) -->
+		<section class="content-header">
+			<h1>
+				Home Page
+			</h1>
+		</section>
+
+		<!-- Main content -->
+		<section class="content">
+			
+				<div class="row">
+					<div class=" col-lg-offset-1   col-lg-3 col-xs-6">
+						<!-- small box -->
+						<div class="small-box bg-yellow">
+							<div class="inner">
+								<h3>      	<span style="color: white; font-weight: bold"
+												  th:utext="${vendorCount}"></span></h3>
+
+								<p>Total Vendors</p>
+							</div>
+							<div class="icon">
+								<i class="ion ion-person"></i>
+							</div>
+							<a th:href="@{/vendors/all}" class="small-box-footer">More info <i
+									class="fa fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<!-- small box -->
+						<div class="small-box bg-green">
+							<div class="inner">
+								<h3>      	<span style="color: white; font-weight: bold"
+												  th:utext="${vendorCount}"></span></h3>
+								<p>Purchase Made</p>
+							</div>
+							<div class="icon">
+								<i class="ion ion-person"></i>
+							</div>
+							<a th:href="@{/vendors/all}" class="small-box-footer">More info <i
+									class="fa fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<!-- small box -->
+						<div class="small-box bg-blue">
+							<div class="inner">
+								<h3>      	<span style="color: white; font-weight: bold"
+												  th:utext="${vendorCount}"></span></h3>
+								<p>Number of Product</p>
+							</div>
+							<div class="icon">
+								<i class="icon ion-compose"></i>
+							</div>
+							<a th:href="@{/vendors/all}" class="small-box-footer">More info <i
+									class="fa fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+				</div>
+			
+
+			<div class="row">
+				<div class="col-lg-offset-3 col-lg-4 col-xs-6">
+					<h2 class="headline text-black"> WELCOME <span class="hidden-xs" th:utext="Admin"></span></h2>
+					<!-- /.error-content -->
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-lg-offset-3 col-md-4">
+					<!-- Widget: user widget style 1 -->
+					<div class="box box-widget widget-user">
+						<!-- Add the bg color to the header using any of the bg-* classes -->
+						<div class="widget-user-header bg-purple-active">
+							<h3 class="widget-user-username"> <span class="hidden-xs" th:utext="Admin"></span></h3>
+							<h5 class="widget-user-desc"> <span class="hidden-xs" th:utext="admin"></span></h5>
+						</div>
+						<div class="widget-user-image">
+							<img class="img-circle" src="/images/avatar5.png" alt="User Avatar">
+						</div>
+						<div class="box-footer">
+							<div class="row">
+								<div class="col-sm-4 border-right">
+									<div class="description-block">
+									</div>
+									<!-- /.description-block -->
+								</div>
+								<!-- /.col -->
+								<div class="col-sm-4 border-right">
+									<div class="description-block">
+										<h5 class="description-header"> <span class="hidden-xs"></span></h5>
+										<span class="description-text">Great!</span>
+									</div>
+									<!-- /.description-block -->
+								</div>
+								<!-- /.col -->
+								<div class="col-sm-4">
+									<div class="description-block">
+									</div>
+									<!-- /.description-block -->
+								</div>
+								<!-- /.col -->
+							</div>
+							<!-- /.row -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- /.error-page -->
+		</section>
+		<!-- /.content -->
+
+	<div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+</body>
+</html>
